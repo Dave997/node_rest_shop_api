@@ -6,19 +6,19 @@
 To retrieve all products: 
 
 ``` url
-https://localhost.com:3000/products
+https://node-restful-shop-api.herokuapp.com/products
 ```
 To retrieve a specific product: 
 
 ``` url
-https://localhost.com:3000/products/<productID>
+https://node-restful-shop-api.herokuapp.com/products/<productID>
 ```
 
 > POST
 
 Create a product 
 
-POST request to: `https://localhost.com:3000/products`
+POST request to: `https://node-restful-shop-api.herokuapp.com/products`
 
 with the following data: 
 ```json
@@ -35,12 +35,12 @@ Delete a specific product
 DELETE request to the following url:
 
 ``` url
-https://localhost.com:3000/products/<productID>
+https://node-restful-shop-api.herokuapp.com/products/<productID>
 ```
 
 > UPDATE
 
-PATCH request to: `https://localhost.com:3000/products/<productID>`
+PATCH request to: `https://node-restful-shop-api.herokuapp.com/products/<productID>`
 
 with the following data: 
 ```json
