@@ -4,6 +4,10 @@ const morgan = require('morgan'); //middleware for authentication
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+const productRoutes = require('./api/routes/products');
+const productOrders = require('./api/routes/orders');
+const userRoutes = require('./api/routes/users');
+
 mongoose.connect('mongodb://node_server:' 
     +  process.env.MONGO_ATLAS_PSW 
     +'@node-rest-shop-shard-00-00-vlzc2.mongodb.net:27017,node-rest-shop-shard-00-01-vlzc2.mongodb.net:27017,node-rest-shop-shard-00-02-vlzc2.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin&retryWrites=true',
@@ -12,9 +16,6 @@ mongoose.connect('mongodb://node_server:'
     }
 );
 mongoose.Promise = global.Promise;
-
-const productRoutes = require('./api/routes/products');
-const productOrders = require('./api/routes/orders');
 
 // all the incoming requests pass through this method (middleware)
 /* the next function will be execute to move the request to the next middleware
@@ -49,6 +50,7 @@ app.use((req, res, next) => {
 // Routes which should handle requests 
 app.use('/products', productRoutes);  //handle get requests on products, this method forwards directly to product.js get method
 app.use('/orders', productOrders); 
+app.use('/users', userRoutes);
 
 // if the server reach that line, none of the routes above was able to process the request, so i should send an error message
 app.use((req, res, next) => {

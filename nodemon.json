@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PSW":"node_server"
+        "MONGO_ATLAS_PSW":"node_server",
+        "JWT_KEY":"secret_key"
     }
 }

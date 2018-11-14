@@ -1,5 +1,7 @@
 # REST api for product management
 
+**N.B** In all the operations that require an authentications, there must be in the POST request header the `Authorization` field with the following content: ```Bearer <user token>``` (the space is required!)
+
 **Usage** 
 > GET 
 
@@ -57,3 +59,27 @@ with the following data:
 
 ```
 N.B. you can also send only one property if you want
+
+## User management
+
+### login
+> POST
+request to `http://node-restful-shop-api.herokuapp.com/users/login`
+
+```json
+{
+	"email": "test@test.it",
+	"password": "test"
+}
+```
+
+### signup
+> POST
+request to `http://node-restful-shop-api.herokuapp.com/users/signup`
+
+```json
+{
+	"email": "test@test.it",
+	"password": "test"
+}
+```
