@@ -79,7 +79,7 @@ https://node-restful-shop-api.herokuapp.com/orders/<orderID>
 
 Create an order 
 
-POST request to: `https://node-restful-shop-api.herokuapp.com/order`
+POST request to: `https://node-restful-shop-api.herokuapp.com/orders`
 
 with the following data: 
 ```json

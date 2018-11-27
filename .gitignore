@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
-#postman testing
+# postman testing
 Postman/
+
+# coverage 
+coverage/
